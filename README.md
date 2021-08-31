@@ -45,9 +45,9 @@ if (votes>Countywinning_count) and (Countyvote_percentage>winning_percentage):
          Countywinning_count = votes  
          winning_county = county_name  
          Countywinning_percentage = Countyvote_percentage  
-         winning_county_summary = (
-        f"-------------------------\n"
-        f"Largest County Turnout: {winning_county}\n"
+         winning_county_summary = (  
+        f"-------------------------\n"  
+        f"Largest County Turnout: {winning_county}\n"  
         f"-------------------------\n")  
 formula changing the county name to whatever geographic area the vote is done in  
 modifying the run off code would be adding an if statement before this snippet of code in line 157  
