@@ -40,20 +40,20 @@ The Results of the election show that:
 - The county with the highest amount of votes cast was Denver with 82.8% of all votes cast (306,055 votes cast)  
 
 ## Election-Audit Summary  
-This script can be used for any election if you modify the script to account for geographic zone instead of county based on the type of election that it is. Another modification could be to account for a run off election where if no candidate gets 50% of the vote there is no declared winner and the top 2 candidates go to a run off election. Modifying the first change would be on the
-if (votes>Countywinning_count) and (Countyvote_percentage>winning_percentage):
-         Countywinning_count = votes
-         winning_county = county_name
-         Countywinning_percentage = Countyvote_percentage
+This script can be used for any election if you modify the script to account for geographic zone instead of county based on the type of election that it is. Another modification could be to account for a run off election where if no candidate gets 50% of the vote there is no declared winner and the top 2 candidates go to a run off election. Modifying the first change would be on the  
+if (votes>Countywinning_count) and (Countyvote_percentage>winning_percentage):  
+         Countywinning_count = votes  
+         winning_county = county_name  
+         Countywinning_percentage = Countyvote_percentage  
          winning_county_summary = (
         f"-------------------------\n"
         f"Largest County Turnout: {winning_county}\n"
-        f"-------------------------\n")
+        f"-------------------------\n")  
 formula changing the county name to whatever geographic area the vote is done in  
-modifying the run off code would be adding an if statement before this snippet of code in line 157
-if (votes > winning_count) and (vote_percentage > winning_percentage):
-            winning_count = votes
-            winning_candidate = candidate_name
-            winning_percentage = vote_percentage
-adding if (votes > winning_count) and (vote_percentage > winning_percentage): and (winning_percentage > .5)
+modifying the run off code would be adding an if statement before this snippet of code in line 157  
+if (votes > winning_count) and (vote_percentage > winning_percentage):  
+            winning_count = votes  
+            winning_candidate = candidate_name  
+            winning_percentage = vote_percentage  
+adding if (votes > winning_count) and (vote_percentage > winning_percentage): and (winning_percentage > .5)  
 then take the top 2 and put them in a run-off election
